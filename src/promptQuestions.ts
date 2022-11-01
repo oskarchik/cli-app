@@ -1,4 +1,5 @@
 import { prompt } from 'prompts';
+
 import { setQuestions } from './questions';
 import { Options } from './types/Options';
 

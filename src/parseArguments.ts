@@ -1,5 +1,6 @@
-import { Command } from 'commander';
 import chalk from 'chalk';
+import { Command } from 'commander';
+
 import { Options } from './types/Options';
 
 export const parseArguments = (rawArgs: string[]) => {

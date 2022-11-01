@@ -5,18 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint './src/*.ts",
-    "lint:fix": "eslint './src/*.ts --fix"
+    "lint": "eslint './src/*.ts'",
+    "lint:fix": "eslint './src/*.ts' --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chalk": "^2.2.0",
+    "@types/figlet": "^1.5.5",
+    "@types/fs-extra": "^9.0.13",
+    "@types/gradient-string": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^29.0.3",
@@ -27,6 +33,12 @@
     "@types/prompts": "^2.4.1",
     "chalk": "^4.1.2",
     "commander": "^9.4.1",
+    "delay": "^5.0.0",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "gradient-string": "^2.0.2",
+    "listr2": "^5.0.5",
+    "pkg-install": "^1.0.0",
     "prompts": "^2.4.2"
   }
 }
