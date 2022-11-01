@@ -1,0 +1,14 @@
+{
+	"env": { "node": true },
+	"extends": ["airbnb", "prettier", "plugin:import/recommended", "plugin:security/recommended"],
+	"plugins": ["prettier", "import", "security"],
+	"parserOptions": { "ecmaVersion": "latest" },
+	"rules": {
+		"prettier/prettier": "error",
+		"func-names": "off",
+		"no-process-exit": "off",
+		"no-unused-vars": "warn",
+		"object-shorthand": "off",
+		"import/prefer-default-export": "off"
+	}
+}
