@@ -1,6 +1,7 @@
 import path from 'path';
-import { Options } from './types/Options';
 import { PromptObject } from 'prompts';
+
+import { Options } from './types/Options';
 
 export const setQuestions = (options: Options) => {
   const questions: PromptObject[] = [
