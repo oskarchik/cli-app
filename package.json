@@ -1,5 +1,5 @@
 {
-  "name": "express-api-builder",
+  "name": "api-builder-express",
   "version": "0.0.0-development",
   "description": "A CLI tool to build express rest apis",
   "main": "index.js",
