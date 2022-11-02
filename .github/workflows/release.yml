@@ -29,5 +29,9 @@ jobs:
       - run: npm run test
       - run: npx semantic-release
         env:
+<<<<<<< HEAD
           access_token: ${{ github.token}}
+=======
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> develop
           NPM_TOKEN: ${{ secrets.NPM_TOKEN}}
