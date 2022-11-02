@@ -1,23 +1,61 @@
 {
-  "name": "cli-app",
-  "version": "1.0.0",
-  "description": "",
+  "name": "api-builder-express",
+  "version": "0.0.0-development",
+  "description": "A CLI tool to build express rest apis",
   "main": "index.js",
+  "bin": "./build/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint './src/*.ts'",
+    "lint:fix": "eslint './src/*.ts' --fix",
+    "build": "rimraf build && tsc -p tsconfig.build.json && npm run copy-files",
+    "clean": "rimraf build",
+    "copy-files": "cp -R ./src/starters ./build/",
+    "prepare": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "api",
+    "rest",
+    "express",
+    "boilerplate",
+    "node",
+    "typescript"
+  ],
+  "author": "Oscar Sanz",
   "license": "ISC",
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/figlet": "^1.5.5",
+    "@types/fs-extra": "^9.0.13",
+    "@types/gradient-string": "^1.1.2",
+    "@types/jest": "^29.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "jest": "^29.2.2",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.5",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/prompts": "^2.4.1",
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1",
+    "delay": "^5.0.0",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "gradient-string": "^2.0.2",
+    "listr2": "^5.0.5",
+    "pkg-install": "^1.0.0",
+    "prompts": "^2.4.2"
   }
 }
