@@ -2,7 +2,8 @@ import path from 'path';
 
 import { Options } from './types/Options';
 export const getTemplate = (options: Options) => {
-  const currentProjectFolder = path.resolve(__dirname, '..');
+  const currentProjectFolder = __dirname;
+
   let dir;
   if (
     options.language?.toLowerCase() === 'javascript' &&
@@ -66,7 +67,7 @@ export const getTemplate = (options: Options) => {
     dir = 'ts-pg';
   }
 
-  const template = path.resolve(currentProjectFolder, `src/starters/${dir}`);
+  const template = path.join(currentProjectFolder, `/starters/${dir}`);
 
   options.template = dir;
 
