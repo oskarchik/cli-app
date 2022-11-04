@@ -1,0 +1,8 @@
+src
+.github
+tsconfig.json
+tsconfig.build.json
+jest.confit.tsconfig
+.prettierrc
+.eslintignore
+.eslintrc.json
