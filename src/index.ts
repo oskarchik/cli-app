@@ -16,6 +16,8 @@ export const createProject = async (options: Options) => {
 
   const templateDir = getTemplate(options);
 
+  options.templateDir = templateDir;
+
   if (fs.existsSync(options.targetDirectory)) {
     console.log(chalk.rgb(255, 7, 58).italic.bold('folder already exists'));
     console.log();
