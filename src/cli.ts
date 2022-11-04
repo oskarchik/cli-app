@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-import { createProject } from 'src';
-
+import { createProject } from './index';
 import { parseArguments } from './parseArguments';
 import { promptQuestions } from './promptQuestions';
 
