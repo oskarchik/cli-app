@@ -2,6 +2,11 @@
   "name": "api-builder-express",
   "version": "0.0.0-development",
   "description": "A CLI tool to build express rest apis",
+  "homepage": "https://github.com/oskarchik/cli-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oskarchik/cli-app"
+  },
   "main": "index.js",
   "bin": "./build/cli.js",
   "scripts": {
@@ -10,7 +15,7 @@
     "lint:fix": "eslint './src/*.ts' --fix",
     "build": "rimraf build && tsc -p tsconfig.build.json && npm run copy-files",
     "clean": "rimraf build",
-    "copy-files": "cp -R ./src/starters ./build/",
+    "copy-files": "rsync -r --exclude=package-lock.json ./src/starters ./build/",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -32,7 +37,6 @@
     "@types/jest": "^29.2.1",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
-    "copyfiles": "^2.4.1",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
