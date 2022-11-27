@@ -12,10 +12,10 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
-  
+
   lint:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -27,8 +27,6 @@ jobs:
       - name: Lint
         run: npm run lint
 
-
- 
   tests:
     needs: [lint]
     runs-on: ubuntu-latest
@@ -44,7 +42,3 @@ jobs:
         run: npm ci
       - name: test
         run: npm run test
-  
-
-      
-      
