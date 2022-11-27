@@ -26,7 +26,7 @@ export const createProject = async (options: Options) => {
   }
 
   try {
-    const exists = await fs.pathExists(templateDir);
+    const exists = await fs.existsSync(templateDir);
     if (!exists) {
       console.log(chalk.rgb(255, 7, 58).bold('ERROR'), 'Invalid template name');
       process.exit(1);
